@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="main.css"> 
+    </head>
+    <body>
+        <div id="header">
+            <div id = "calendarTab" class = "tab">
+                <h1>calendar</h1>
+            </div>
+            <div id = "homeTab" class = "tab">
+                <h1>home</h1>
+            </div>
+            <div id = "settingsTab" class = "tab">
+                <h1>settings</h1>
+            </div>
+        </div>
+        <div id ="calendar" class = "workspace">
+            ye
+        </div>
+        <div id ="home" class = "workspace">
+            ye
+        </div>
+        <div id ="settings" class = "workspace">
+            ye
+        </div>
+    </body>
+
+    <script>
+        let tabs = [document.getElementById("calendarTab"), document.getElementById("homeTab"), document.getElementById("settingsTab")];
+        let content = [document.getElementById("calendar"), document.getElementById("home"), document.getElementById("settings")];
+        tabs.forEach(function(tab, index){
+            tab.addEventListener("click", function(){
+                for (let k = 0; k < 3; k++){
+                    (k==index) ? (content[k].style.display = "block") : (content[k].style.display = "none");
+                }
+            })
+        });
+    </script>
+</html>
