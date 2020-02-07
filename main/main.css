@@ -3,8 +3,11 @@
     padding:0;
     border: none;
     height: 100vh;
+    overflow-y: hidden;
 }
-
+body{
+    background-color: green;
+}
 #header{
     height: 7%;
 }
@@ -18,44 +21,142 @@
 
 .tab{
     height:100%;
-    width:33vw;
+    width: calc(100% /3);
     display: inline-block;
 }
 
 #homeTab{
+    border-bottom: 0.1vh red solid;
     background-color: red;
 }
 
 #calendarTab{
+    border-bottom: 0.1vh yellow solid;
+
     background-color: yellow;
 
 }
 
 #settingsTab{
+    border-bottom: 0.1vh green solid;
+
     background-color: green;
 }
 
 .workspace{
     width:100vw;
+    height: 93%;
+    position: fixed;
+    bottom: 0;
+    z-index: -4;
     padding:0.1em;
 }
 
 #home{
-    height:93%;
     background-color: red;
     display: block;
 }
 
-#calendar{
-    height:93%;
+#today{
+    height: 30%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: white;
+}
 
+#today h2{
+    height: auto;
+    font-size: 6vw;
+    padding: 2vh 3vw 0 3vw;
+}
+
+#today h4{
+    height:auto;
+    font-size:3vw;
+    padding: 0.2vh 3vw;
+}
+
+#timeline{
+    height: 45%;
+    width: 90%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    padding: 2vh 1.5vw 1vh 1.5vw;
+    background-color:green;
+}
+
+#events{
+    height: 60%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: white;
+}
+
+#eventsHeader{
+    height:15%;
+    width:100%;
+    background-color:gray;
+}
+#calendar{
     background-color: yellow;
     display: none;
 }
 
-#settings{
-    height:93%;
+#calendarObject{
+    height: 50%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: white;
+}
 
+
+#calendarDetails{
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: white;
+}
+
+#settings{
     background-color: green;
     display: none;
+}
+
+#settingsAccount{
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: white;
+}
+
+#settingsNotifs{
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: white;
+}
+
+#settings h2{
+    height: auto;
+    font-size: 6vw;
+    padding: 2vh 3vw 0 3vw;
+}
+
+#settings h4{
+    height:auto;
+    font-size:3vw;
+    padding: 0.2vh 3vw;
 }
