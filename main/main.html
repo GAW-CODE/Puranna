@@ -1,76 +1,104 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <link rel="stylesheet" type="text/css" href="main.css"> 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
-        <div id = "modal">
-            <div id = "modalHeader"></div>
-            <input type ="text" id="title" placeholder = "title...">
-            <input type = "date" id="datee">
-            <input type = "time" id = timee">
-            <div id = "submitBtn">SUBMIT</div>
-        </div>
-        <div id = "black"></div>
-        <div id="header">
-            <div id = "calendarTab" class = "tab">
-                <h1>calendar</h1>
-            </div><!--
-         --><div id = "homeTab" class = "tab">
-                <h1>home</h1>
-            </div><!--
-         --><div id = "settingsTab" class = "tab">
-                <h1>settings</h1>
-            </div><!--
-        --><div></div>
-        </div>
-        <div id ="calendar" class = "workspace">
-            <div id = "calendarObject">
+<head>
+    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="modal">
+    <div id="modalHeader"></div>
+    <input id="title" placeholder="title..." type="text">
+    <input id="datee" type="date">
+    <input id=timee" type="time">
+    <div id="submitBtn">SUBMIT</div>
+</div>
+<div id="black"></div>
+<div id="header">
+    <div class="tab" id="calendarTab">
+        <h1>calendar</h1>
+    </div><!--
+         -->
+    <div class="tab" id="homeTab">
+        <h1>home</h1>
+    </div><!--
+         -->
+    <div class="tab" id="settingsTab">
+        <h1>settings</h1>
+    </div><!--
+        -->
+    <div></div>
+</div>
+<div class="workspace" id="calendar">
+    <div id="calendarObject">
 
-            </div>
-            <div id = "calendarDetails"></div>
+    </div>
+    <div id="calendarDetails"></div>
+</div>
+<div class="workspace" id="home">
+    <div id="today">
+        <h2>TODAY</h2>
+        <h4 id="currentTime">Loading...</h4>
+        <div id="timeline">
+            <canvas></canvas>
         </div>
-        <div id ="home" class = "workspace">
-            <div id = "today">
-                <h2>TODAY</h2>
-                <h4>january 20th, 2020</h4>
-                <div id = "timeline">
-                    <canvas></canvas>
-                </div>
-            </div>
-            <div id= "events">
-                <div id = "eventsHeader"><h3>EVENTS</h3><img onclick="openModal" id = "addNew" src="../assets/plus.png"></div>
-            </div>
+    </div>
+    <div id="events">
+        <div id="eventsHeader"><h3>EVENTS</h3><img id="addNew" onclick="openModal" src="../assets/plus.png"></div>
+    </div>
 
-        <div id ="settings" class = "workspace">
-            <div id = "settingsAccount">
-                <h2>ACCOUNTS</h2>
-            </div>
-            <div id = "settingsNotifs">
-                <h2>NOTIFICATIONS</h2>
-            </div>
+    <div class="workspace" id="settings">
+        <div id="settingsAccount">
+            <h2>ACCOUNTS</h2>
         </div>
-    </body>
+        <div id="settingsNotifs">
+            <h2>NOTIFICATIONS</h2>
+        </div>
+    </div>
+</body>
 
-    <script>
-        let tabs = [document.getElementById("calendarTab"), document.getElementById("homeTab"), document.getElementById("settingsTab")];
-        let content = [document.getElementById("calendar"), document.getElementById("home"), document.getElementById("settings")];
-        tabs.forEach(function(tab, index){
-            tab.addEventListener("click", function(){
-                for (let k = 0; k < 3; k++){
-                    (k==index) ? (content[k].style.display = "block") : (content[k].style.display = "none");
-                }
-            })
-        });
-        document.getElementById("eventsHeader").addEventListener("click", function(){
-            document.getElementById("modal").style.display="block";
-            document.getElementById("black").style.display="block";
-        
-        });
-        document.getElementById("submitBtn").addEventListener("click", function(){
-            document.getElementById("modal").style.display="none";
-            document.getElementById("black").style.display="none";
+<script>
+    let mapping = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December"
+    ];
+
+    let date = new Date();
+    document.getElementById("currentTime").innerText = mapping[date.getMonth()] + " " + getNumberWithOrdinal(date.getDate()) + ", " + date.getFullYear();
+
+    function getNumberWithOrdinal(n) {
+        let s = ["th", "st", "nd", "rd"],
+            v = n % 100;
+        return n + (s[(v - 20) % 10] || s[v] || s[0]);
+    }
+</script>
+<script>
+    let tabs = [document.getElementById("calendarTab"), document.getElementById("homeTab"), document.getElementById("settingsTab")];
+    let content = [document.getElementById("calendar"), document.getElementById("home"), document.getElementById("settings")];
+    tabs.forEach(function (tab, index) {
+        tab.addEventListener("click", function () {
+            for (let k = 0; k < 3; k++) {
+                (k === index) ? (content[k].style.display = "block") : (content[k].style.display = "none");
+            }
         })
-    </script>
+    });
+    document.getElementById("eventsHeader").addEventListener("click", function () {
+        document.getElementById("modal").style.display = "block";
+        document.getElementById("black").style.display = "block";
+
+    });
+    document.getElementById("submitBtn").addEventListener("click", function () {
+        document.getElementById("modal").style.display = "none";
+        document.getElementById("black").style.display = "none";
+    })
+</script>
 </html>
