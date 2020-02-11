@@ -4,6 +4,7 @@
     border: none;
     height: 100vh;
     overflow-y: hidden;
+    font-family: CaviarDreams;
 }
 body{
     background-color: green;
@@ -26,20 +27,15 @@ body{
 }
 
 #homeTab{
-    border-bottom: 0.1vh red solid;
-    background-color: red;
+        background-color: red;
 }
 
 #calendarTab{
-    border-bottom: 0.1vh yellow solid;
-
     background-color: yellow;
 
 }
 
 #settingsTab{
-    border-bottom: 0.1vh green solid;
-
     background-color: green;
 }
 
@@ -67,6 +63,7 @@ body{
 }
 
 #today h2{
+    font-family: CaviarDreamsBold;
     height: auto;
     font-size: 6vw;
     padding: 2vh 3vw 0 3vw;
@@ -98,9 +95,80 @@ body{
 }
 
 #eventsHeader{
+    padding:1em;
     height:15%;
     width:100%;
     background-color:gray;
+}
+
+#eventsHeader h3{
+    height: auto;
+    display: inline-block;
+    font-family: CaviarDreamsBold;
+    font-size: 6vw;
+    margin: 2vh ;
+}
+
+#addNew{
+    height:6vh;
+    width: auto;
+    position: absolute;
+    right: 10vw;
+    bottom: 50vh;
+    pointer-events: none 
+
+}
+/** modal stuff**/
+#black{
+    display: none;
+    position: fixed;
+    z-index:3;
+    height: 101vh;
+    width: 101vw;
+    background-color: black;
+    opacity: 0.5;
+}
+#modal{ 
+    display: none;
+    height: 60vh;
+    width: 80vw;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index:4;
+    background-color: green;
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.2);
+}
+
+#modalHeader{
+    height: 15%;
+    background-color: white;
+}
+
+input{
+    width: 70%;
+    height: 10%;
+    margin: 1.5em 1em;
+    padding: 0.2em 0.8em;
+    font-size: 4vw;
+}
+
+#datee{
+    width: 40%;
+}
+#timee{
+    width: 40%;
+}
+
+#submitBtn{
+    text-align: center;
+    background-color: yellow;
+    height: 7%;
+    width: 40%;
+    padding: 1em 1em 0.5em 1em;
+    margin: auto;
+    font-size: 3vh;
 }
 #calendar{
     background-color: yellow;
@@ -159,4 +227,14 @@ body{
     height:auto;
     font-size:3vw;
     padding: 0.2vh 3vw;
+}
+
+@font-face{
+    font-family: CaviarDreams;
+    src: url(../assets/caviar_dreams/CaviarDreams.ttf);
+}
+
+@font-face{
+    font-family: CaviarDreamsBold;
+    src: url(../assets/caviar_dreams/CaviarDreams_Bold.ttf);
 }

@@ -4,8 +4,17 @@
         <link rel="stylesheet" type="text/css" href="main.css"> 
         <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
         <script src="banner.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
+        <div id = "modal">
+            <div id = "modalHeader"></div>
+            <input type ="text" id="title" placeholder = "title...">
+            <input type = "date" id="datee">
+            <input type = "time" id = timee">
+            <div id = "submitBtn">SUBMIT</div>
+        </div>
+        <div id = "black"></div>
         <div id="header">
             <div id = "calendarTab" class = "tab">
                 <h1>calendar</h1>
@@ -33,9 +42,9 @@
                 </div>
             </div>
             <div id= "events">
-                <div id = "eventsHeader">yeet</div>
+                <div id = "eventsHeader"><h3>EVENTS</h3><img onclick="openModal" id = "addNew" src="../assets/plus.png"></div>
             </div>
-        </div>
+
         <div id ="settings" class = "workspace">
             <div id = "settingsAccount">
                 <h2>ACCOUNTS</h2>
@@ -56,5 +65,14 @@
                 }
             })
         });
+        document.getElementById("eventsHeader").addEventListener("click", function(){
+            document.getElementById("modal").style.display="block";
+            document.getElementById("black").style.display="block";
+        
+        });
+        document.getElementById("submitBtn").addEventListener("click", function(){
+            document.getElementById("modal").style.display="none";
+            document.getElementById("black").style.display="none";
+        })
     </script>
 </html>
