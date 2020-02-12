@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="main.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 </head>
 <body>
@@ -43,7 +43,7 @@
         </div>
     </div>
     <div id="events">
-        <div id="eventsHeader"><h3>EVENTS</h3><img id="addNew" onclick="openModal" src="../assets/plus.png"></div>
+        <div id="eventsHeader"><h3>EVENTS</h3><img id="addNew" onclick="openModal" src="assets/plus.png"></div>
     </div>
 
     <div class="workspace" id="settings">
@@ -56,30 +56,10 @@
     </div>
 </body>
 
+<script type="text/javascript" src="./js/date.js"></script>
 <script>
-    let mapping = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December"
-    ];
-
     let date = new Date();
     document.getElementById("currentTime").innerText = mapping[date.getMonth()] + " " + getNumberWithOrdinal(date.getDate()) + ", " + date.getFullYear();
-
-    function getNumberWithOrdinal(n) {
-        let s = ["th", "st", "nd", "rd"],
-            v = n % 100;
-        return n + (s[(v - 20) % 10] || s[v] || s[0]);
-    }
 </script>
 <script>
     let tabs = [document.getElementById("calendarTab"), document.getElementById("homeTab"), document.getElementById("settingsTab")];

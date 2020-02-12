@@ -4,7 +4,7 @@
     border: none;
     height: 100vh;
     overflow-y: hidden;
-    font-family: CaviarDreams;
+    font-family: CaviarDreams, serif;
 }
 
 body {
@@ -65,7 +65,7 @@ body {
 }
 
 #today h2 {
-    font-family: CaviarDreamsBold;
+    font-family: CaviarDreamsBold, serif;
     height: auto;
     font-size: 6vw;
     padding: 2vh 3vw 0 3vw;
