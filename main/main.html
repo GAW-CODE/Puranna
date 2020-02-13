@@ -4,14 +4,16 @@
         <link rel="stylesheet" type="text/css" href="main.css"> 
         <script src="https://cdn.jsdelivr.net/npm/p5@0.10.2/lib/p5.js"></script>
         <script src="banner.js" defer></script>
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
     <body>
         <div id = "modal">
-            <div id = "modalHeader"></div>
+            <div id = "modalHeader"><h4>ADD NEW EVENT</h4></div>
             <input type ="text" id="title" placeholder = "title...">
             <input type = "date" id="datee">
-            <input type = "time" id = timee">
+            <input type = "time" id = "timee">
+            <input type = "checkbox" id = "priorityCheck"> <h5>Set as priority</h5>
             <div id = "submitBtn">SUBMIT</div>
         </div>
         <div id = "black"></div>
@@ -42,8 +44,12 @@
                 </div>
             </div>
             <div id= "events">
-                <div id = "eventsHeader"><h3>EVENTS</h3><img onclick="openModal" id = "addNew" src="../assets/plus.png"></div>
+                <div id = "eventsHeader">
+                    <h3>EVENTS</h3>
+                    <img id = "addNew" src="../assets/plus.png">
+                </div>
             </div>
+        </div>
 
         <div id ="settings" class = "workspace">
             <div id = "settingsAccount">
@@ -61,16 +67,27 @@
         tabs.forEach(function(tab, index){
             tab.addEventListener("click", function(){
                 for (let k = 0; k < 3; k++){
-                    (k==index) ? (content[k].style.display = "block") : (content[k].style.display = "none");
+                    if(k==index){
+                        tabs[k].style.backgroundColor="var(--main-bg-color)";
+                        content[k].style.display="block";
+                    }
+                    else{
+                        tabs[k].style.backgroundColor="var(--side-bg-color)";
+                        content[k].style.display="none";
+                    }
                 }
             })
         });
-        document.getElementById("eventsHeader").addEventListener("click", function(){
+        document.getElementById("addNew").addEventListener("click", function(){
             document.getElementById("modal").style.display="block";
             document.getElementById("black").style.display="block";
         
         });
         document.getElementById("submitBtn").addEventListener("click", function(){
+            document.getElementById("modal").style.display="none";
+            document.getElementById("black").style.display="none";
+        })
+        document.getElementById("black").addEventListener("click", function(){
             document.getElementById("modal").style.display="none";
             document.getElementById("black").style.display="none";
         })
