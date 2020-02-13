@@ -2,7 +2,13 @@
     margin:0;
     padding:0;
     border: none;
-    height: 100vh;
+}
+body{
+    margin: 0vw;
+    background-color: lightgray;
+    padding-top: 0vw;
+    padding-left: 8vw;
+    padding-right: 8vw;
 }
 
 #header{
