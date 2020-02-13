@@ -1,6 +1,6 @@
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     border: none;
     height: 100vh;
     overflow-y: hidden;
@@ -16,12 +16,13 @@ body{
     z-index: -5;
     width: 101%;
 }
-#header{
+
+#header {
     height: 7%;
     margin-right: -3px;
 }
 
-#header h1{
+#header h1 {
     height: auto;
     display: inline-block;
     padding: 1vh 2vw;
@@ -55,8 +56,8 @@ body{
 
 }
 
-.workspace{
-    width:100vw;
+.workspace {
+    width: 100vw;
     height: 93%;
     position: fixed;
     bottom: 0;
@@ -86,9 +87,9 @@ body{
     padding: 2vh 3vw 0 3vw;
 }
 
-#today h4{
-    height:auto;
-    font-size:3vw;
+#today h4 {
+    height: auto;
+    font-size: 3vw;
     padding: 0.2vh 3vw;
 }
 
@@ -96,7 +97,7 @@ body{
     border-radius:1vh;
     height: 45%;
     width: 90%;
-    margin-left:auto;
+    margin-left: auto;
     margin-right: auto;
     margin-top: 2vh;
     padding: 2vh 1.5vw 1vh 1.5vw;
@@ -123,11 +124,11 @@ body{
     background-color:var(--other-color);
 }
 
-#eventsHeader h3{
+#eventsHeader h3 {
     height: auto;
     display: inline-block;
     font-size: 6vw;
-    margin: 2vh ;
+    margin: 2vh;
 }
 
 #addNew{
@@ -138,8 +139,9 @@ body{
     top: 37vh;
 
 }
+
 /** modal stuff**/
-#black{
+#black {
     display: none;
     position: fixed;
     z-index:3;
@@ -189,7 +191,7 @@ input#priorityCheck {
     position: relative;
 }
 
-input{
+input {
     width: 70%;
     height: 10%;
     margin: 1em 1em;
@@ -217,7 +219,7 @@ input:focus {
 
 }
 
-#submitBtn{
+#submitBtn {
     text-align: center;
     background-color: var(--other-color);
     height: 7%;
@@ -232,7 +234,7 @@ input:focus {
     display: none;
 }
 
-#calendarObject{
+#calendarObject {
     height: 50%;
     width: 90%;
     margin-left: auto;
@@ -242,7 +244,7 @@ input:focus {
 }
 
 
-#calendarDetails{
+#calendarDetails {
     height: 40%;
     width: 90%;
     margin-left: auto;
@@ -256,7 +258,7 @@ input:focus {
     display: none;
 }
 
-#settingsAccount{
+#settingsAccount {
     height: 40%;
     width: 90%;
     margin-left: auto;
@@ -265,7 +267,7 @@ input:focus {
     background-color: white;
 }
 
-#settingsNotifs{
+#settingsNotifs {
     height: 40%;
     width: 90%;
     margin-left: auto;
@@ -274,14 +276,14 @@ input:focus {
     background-color: white;
 }
 
-#settings h2{
+#settings h2 {
     height: auto;
     font-size: 6vw;
     padding: 2vh 3vw 0 3vw;
 }
 
-#settings h4{
-    height:auto;
-    font-size:3vw;
+#settings h4 {
+    height: auto;
+    font-size: 3vw;
     padding: 0.2vh 3vw;
 }
