@@ -1,0 +1,289 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    height: 100vh;
+    overflow-y: hidden;
+    font-family: Roboto;
+    --main-bg-color:#ffb4b2;
+    --side-bg-color: #fffefd;
+    --other-color: #928686;
+    
+}
+body{
+    background-color:var(--other-color);
+    position: fixed;
+    z-index: -5;
+    width: 101%;
+}
+
+#header {
+    height: 7%;
+    margin-right: -3px;
+}
+
+#header h1 {
+    height: auto;
+    display: inline-block;
+    padding: 1vh 2vw;
+    font-size: 4vw;
+}
+
+.tab{
+    border-top-right-radius: 2vh;
+    border-top-left-radius: 1vh;
+
+    padding-top:1vh;
+    height:100%;
+    width: calc(100% /3);
+    display: inline-block;
+}
+.tab h3{
+    margin-left: 1vw;
+}
+#homeTab{
+    background-color:var(--main-bg-color);
+
+}
+
+#calendarTab{
+    background-color: var(--side-bg-color);
+
+}
+
+#settingsTab{
+    background-color: var(--side-bg-color);
+
+}
+
+.workspace {
+    width: 100vw;
+    height: 93%;
+    position: fixed;
+    bottom: 0;
+    z-index: -4;
+    padding:0.1em;
+    background:linear-gradient(180deg, var(--main-bg-color), #ffe4c9)
+}
+
+#home{
+    display: block;
+}
+
+#today{
+    border-radius:1vh;
+    height: 30%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: var(--side-bg-color);
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
+}
+
+#today h2{
+    height: auto;
+    font-size: 6vw;
+    padding: 2vh 3vw 0 3vw;
+}
+
+#today h4 {
+    height: auto;
+    font-size: 3vw;
+    padding: 0.2vh 3vw;
+}
+
+#timeline{
+    border-radius:1vh;
+    height: 45%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    padding: 2vh 1.5vw 1vh 1.5vw;
+    background-color:var(--other-color);
+}
+
+#events{
+    border-radius:1vh;
+
+    height: 60%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: var(--side-bg-color);
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
+
+}
+
+#eventsHeader{
+    padding:1em;
+    height:15%;
+    width:100%;
+    background-color:var(--other-color);
+}
+
+#eventsHeader h3 {
+    height: auto;
+    display: inline-block;
+    font-size: 6vw;
+    margin: 2vh;
+}
+
+#addNew{
+    height: 6vh;
+    position: absolute;
+    width: auto;
+    right: 6vh;
+    top: 37vh;
+
+}
+
+/** modal stuff**/
+#black {
+    display: none;
+    position: fixed;
+    z-index:3;
+    height: 105vh;
+    width: 105vw;
+    background-color: black;
+    opacity: 0.5;
+}
+#modal{ 
+    border-radius:1vh;
+    display: none;
+    height: 60vh;
+    width: 80vw;
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index:4;
+    background-color: var(--side-bg-color);
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.2);
+    text-align: center;
+}
+
+#modalHeader{
+    text-align: center;
+    height: 15%;
+    background-color: var(--main-bg-color);
+}
+#modalHeader h4{
+    padding-top: 2.7vh;
+    height: auto;
+    font-size:6vw;
+}
+
+#modal h5{
+    font-size: 4vw;
+    display: inline-block;
+    height: auto;
+    position: relative;
+    bottom: 5.5vh;
+    left: -10vw;}
+input#priorityCheck {
+    display: inline-block;
+    transform: scale(0.5);
+    right: 15.7vh;
+    top: 1vh;
+    position: relative;
+}
+
+input {
+    width: 70%;
+    height: 10%;
+    margin: 1em 1em;
+    padding: 0em 0.5em;
+    font-size: 4vw;
+    border-bottom: var(--other-color) solid 0.25vh;
+}
+input:focus {
+    outline: none;
+
+}
+
+
+#title{
+    margin-top: 5vh;
+}
+#datee{
+    width: 40%;
+    display: inline-block;
+    margin-right: 0;
+}
+#timee{
+    width: 26%;
+    margin-left: 0;
+
+}
+
+#submitBtn {
+    text-align: center;
+    background-color: var(--other-color);
+    height: 7%;
+    width: 40%;
+    padding: 0.9em 1em 0.7em 1em;    
+    margin: auto;
+    font-size: 3vh;
+    border-radius:1vh;
+}
+#calendar{
+    background-color:var(--main-bg-color);
+    display: none;
+}
+
+#calendarObject {
+    height: 50%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: white;
+}
+
+
+#calendarDetails {
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: white;
+}
+
+#settings{
+    background-color:var(--main-bg-color);
+    display: none;
+}
+
+#settingsAccount {
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: white;
+}
+
+#settingsNotifs {
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: white;
+}
+
+#settings h2 {
+    height: auto;
+    font-size: 6vw;
+    padding: 2vh 3vw 0 3vw;
+}
+
+#settings h4 {
+    height: auto;
+    font-size: 3vw;
+    padding: 0.2vh 3vw;
+}
