@@ -51,7 +51,7 @@ function draw() {
   	fill(255, Math.round(-$X/width)==i ? 140 : 40);
   	ellipse((width-events.length*20)/2 + 20*i, height-5, 10, 10);
   }
-  if(mouseIsPressed){
+  if(mouseX > 0 && mouseX < width && mouseY > 0 && mouseY < height && mouseIsPressed){
   	$X += (pmouseX - mouseX);
   }else{
   	$X -= ($X - constrain(Math.round($X/width)*width, -(width*events.length-width), 0)) / 7;
