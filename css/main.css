@@ -148,7 +148,7 @@ body{
     background-color: var(--side-bg-color);
     border-bottom: solid 0.2vh var(--other-color);
     transition: background-color 0.1s ease-in;
-    border-right: 15vw red solid;
+    border-right: 15vw var(--other-color) solid;
 }
 .eventPriority:active{
     background-color:#ded9d3;
@@ -250,6 +250,7 @@ input {
     padding: 0em 0.5em;
     font-size: 4vw;
     border-bottom: var(--other-color) solid 0.25vh;
+    background-color: transparent;
 }
 input:focus {
     outline: none;
