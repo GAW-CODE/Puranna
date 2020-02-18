@@ -288,38 +288,3 @@ input:focus {
     margin-top: 2vh;
     background-color: white;
 }
-
-#settings{
-    background-color:var(--main-bg-color);
-    display: none;
-}
-
-#settingsAccount {
-    height: 40%;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5vh;
-    background-color: white;
-}
-
-#settingsNotifs {
-    height: 40%;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 2vh;
-    background-color: white;
-}
-
-#settings h2 {
-    height: auto;
-    font-size: 6vw;
-    padding: 2vh 3vw 0 3vw;
-}
-
-#settings h4 {
-    height: auto;
-    font-size: 3vw;
-    padding: 0.2vh 3vw;
-}

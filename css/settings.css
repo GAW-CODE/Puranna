@@ -1,0 +1,70 @@
+
+#settings{
+    background-color:var(--main-bg-color);
+    display: none;
+}
+
+#settingsAccount {
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5vh;
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
+}
+
+#settingsNotifs {
+    height: 40%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2vh;
+    background-color: white;
+    border-radius: 1vw;
+    box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
+}
+
+#settings h2 {
+    height: auto;
+    font-size: 6vw;
+    padding: 1.25vh;
+    box-shadow: 0 3px rgba(0,0,0,0.15);
+    text-align: center;
+    background-color: var(--other-color);
+    color: white;
+}
+
+#settings h4 {
+    height: auto;
+    font-size: 3vw;
+    padding: 0.2vh 3vw;
+}
+#logoutBtn{
+    background-color: var(--other-color);
+    border-radius: 1vw;
+    margin-top: 5vw;
+    height: 7vh;
+    text-align: center;
+    font-size: 5vw;
+    color: white;
+    float: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.choice{
+    position: relative;
+    height: 15%;
+    width: 94%;
+    padding: 2vw 3vw 1vw 3vw;
+    margin-top: 1vw;
+    box-shadow: 0 3px rgba(0,0,0,0.15);
+}
+.choiceText{
+    font-size: 5vw;
+    width: 90%;
+    height: 100%;
+    padding-top: 2%;
+}
