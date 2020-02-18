@@ -11,8 +11,11 @@
     margin-right: auto;
     margin-top: 5vh;
     background-color: white;
+<<<<<<< HEAD
     border-radius: 1vw;
     box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
+=======
+>>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
 }
 
 #settingsNotifs {
@@ -22,18 +25,25 @@
     margin-right: auto;
     margin-top: 2vh;
     background-color: white;
+<<<<<<< HEAD
     border-radius: 1vw;
     box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
+=======
+>>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
 }
 
 #settings h2 {
     height: auto;
     font-size: 6vw;
+<<<<<<< HEAD
     padding: 1.25vh;
     box-shadow: 0 3px rgba(0,0,0,0.15);
     text-align: center;
     background-color: var(--other-color);
     color: white;
+=======
+    padding: 2vh 3vw 0 3vw;
+>>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
 }
 
 #settings h4 {
@@ -41,6 +51,7 @@
     font-size: 3vw;
     padding: 0.2vh 3vw;
 }
+<<<<<<< HEAD
 #logoutBtn{
     background-color: var(--other-color);
     border-radius: 1vw;
@@ -68,3 +79,5 @@
     height: 100%;
     padding-top: 2%;
 }
+=======
+>>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888

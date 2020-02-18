@@ -139,7 +139,22 @@ body{
     border-bottom-left-radius: 1vh;
     border-bottom-right-radius:1vh;
 }
-#event{
+.eventPriority{
+    display: inline-block;
+    height: 20%;
+    width: 86%;
+    padding: 0 3em;
+    padding-top: 2.5vh;
+    background-color: var(--side-bg-color);
+    border-bottom: solid 0.2vh var(--other-color);
+    transition: background-color 0.1s ease-in;
+    border-right: 15vw var(--other-color) solid;
+}
+.eventPriority:active{
+    background-color:#ded9d3;
+}
+
+.event{
     display: inline-block;
     height: 20%;
     width: 89%;
@@ -149,16 +164,17 @@ body{
     border-bottom: solid 0.2vh var(--other-color);
     transition: background-color 0.1s ease-in 
 }
-#event:active{
+.event:active{
     background-color:#ded9d3;
 }
-#event h5{
+
+#eventh5{
     font-size: 3vh;
     height: auto;
     font-weight: normal;
 
 }
-#event h6{
+#eventh6{
     font-size:2vh;
     height: auto;
     font-weight: normal;
@@ -234,6 +250,7 @@ input {
     padding: 0em 0.5em;
     font-size: 4vw;
     border-bottom: var(--other-color) solid 0.25vh;
+    background-color: transparent;
 }
 input:focus {
     outline: none;
