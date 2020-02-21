@@ -10,6 +10,7 @@ var firebaseConfig = {
   measurementId: "G-ZV8YN4NESV"
 };
 
+
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
@@ -19,16 +20,19 @@ const db = firebase.firestore();
 var uid;
 
 //signup form
-var signUpForm = document.querySelector("#signUpForm");
-signUpForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const email = signUpForm[`email`].value;
-  const password = signUpForm[`password`].value;
+document.getElementById("signUpSubmitBtn").addEventListener("click", (e) => {
+  const inputs = document.getElementsByClassName("InputBoxes");
+  console.log(inputs);
+  const email = inputs[0].value;
+  const password = inputs[1].value;
   auth.createUserWithEmailAndPassword(email, password).then(cred => {
   }).catch(err => {
     console.log(err.message);
   }).finally(() => {
-    signUpForm.reset();
+    for(let i=0;i<inputs.length;i++){
+      inputs.value="";
+
+    }
   })
 })
 
@@ -37,18 +41,21 @@ auth.onAuthStateChanged(user => {
   if (user) {
     console.log("logged in");
     setupUI(user);
+    window.location.href = '../index.html';
+
+
   }
   else {
     console.log("logged out");
   }
 })
-
-//sign in
-var signInForm = document.querySelector("#signInForm");
-signInForm.addEventListener('submit', (e) => {
+/**
+//log in
+document.getElementById("loginSubmitBtn").addEventListener('submit', (e) => {
   e.preventDefault();
   const email = signInForm[`email`].value;
   const password = signInForm[`password`].value;
+  const inputArrLog = document.getElementsByClassName("InputBoxes");
   auth.signInWithEmailAndPassword(email, password).then(cred => {
   }).catch(err => {
     console.log(err);
@@ -61,14 +68,13 @@ document.querySelector(".signOutBtn").addEventListener("click", () => {
   auth.signOut().then(() => {
   });
 })
+
 //submit reminder
-var reminderForm = document.querySelector("#reminder");
-reminderForm.addEventListener('submit', (e) => {
-  e.preventDefault();
-  const reminder_title = reminderForm['reminder_title'].value;
-  const reminder_time = reminderForm['reminder_time'].value;
-  const reminder_date = reminderForm['reminder_date'].value;
-  const reminder_priority = reminderForm['reminder_priority'].value == "true" ? true : false;
+document.getElementById("submitBtn").addEventListener("click", (e) => {
+  const reminder_title = document.getElementById("title").value;
+  const reminder_time = document.getElementById("timee").value;
+  const reminder_date = document.getElementById("datee").value;
+  const reminder_priority = document.getElementById("priorityCheck").checked;
 
   db.collection(uid).doc().set({
       title: reminder_title,
@@ -77,5 +83,6 @@ reminderForm.addEventListener('submit', (e) => {
       priority: reminder_priority,
       month: parseInt(reminder_date.substring(5, 7))
   });
-  reminderForm.reset();
+  console.log("success")
 })
+ */
