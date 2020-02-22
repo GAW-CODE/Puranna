@@ -98,7 +98,7 @@
         tabs.forEach(function(tab, index){
             tab.addEventListener("click", function(){
                 for (let k = 0; k < 3; k++){
-                    if(k==index){
+                    if(k===index){
                         tabs[k].style.backgroundColor="var(--main-bg-color)";
                         content[k].style.display="block";
                     }

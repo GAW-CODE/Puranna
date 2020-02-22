@@ -1,0 +1,55 @@
+.inputBox {
+    font-size: 5.5vw;
+    font-family: 'Roboto', sans-serif;
+    width: 90%;
+    height: 6vh;
+    border-radius: 1.5vw;
+    margin: 3.7vw 5vw 5vw 2vw;
+    padding: 0 0 0 2vw;
+    border: none;
+}
+
+.backgroundBox1 {
+    position: absolute;
+    top: 0px;
+    border-top: 100% solid transparent;
+    width: 0;
+    height: 0;
+    border-top: 90vw solid rgb(205,199,185);
+    border-right: 100vw solid transparent;
+    z-index: -1;
+}
+
+.backgroundBox2 {
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+    border-bottom: 65vw solid rgb(205,199,185);
+    border-right: 100vw solid transparent;
+}
+
+.largeTitle {
+    color: black;
+    font-size: 13vw;
+    text-align: center;
+    margin-top: 10vw;
+    font-family: 'Roboto', sans-serif;
+}
+
+.submitButton {
+    color: rgb(247,246,242);
+    font-size: 5.5vw;
+    border-radius: 2vw;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    right: 15vw;
+    top: 115vw;
+    height: 6vh;
+    padding-left: 4vw;
+    padding-right: 4vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+    border: none;
+    background-color: rgb(104,100,100);
+}

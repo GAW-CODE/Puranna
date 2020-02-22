@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="login.css"> 
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
-        <script src = "auth.js"></script>
-        <script src = "authFunctions.js"></script>
         <script src = "../js/auth.js" defer></script>
         <script src = "../js/authFunctions.js" defer></script>
         <script src = "../js/login.js" defer></script>
@@ -13,17 +13,16 @@
         <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
     </head>
     <body>
-        <div id="background"></div>
-        <div id="boxOne"></div>
-        <div id="boxTwo"></div>
-        <h1 id="title"> LILLY.LY </h1>
+        <div class="backgroundBox1"></div>
+        <div class="backgroundBox2"></div>
+        <h1 class="largeTitle"> LILLY.LY </h1>
             <div id="login">
                 <h1 id="loginName">LOGIN</h1>
                  <form>
-                    <input class ="InputBoxes" type="text" name="email" placeholder="email"> 
-                    <input class ="InputBoxes" type="text" name="password" placeholder="password">
+                    <input class ="inputBox" type="text" name="email" placeholder="email">
+                    <input class ="inputBox" type="text" name="password" placeholder="password">
                  </form>
-                 <input id="loginSubmitBtn" type="submit" value="submit">
+                 <input class="submitButton" id="loginButton" type="submit" value="submit">
             </div>
     </body>
 </html>

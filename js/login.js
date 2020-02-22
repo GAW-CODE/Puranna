@@ -1,6 +1,6 @@
 
 //log in
-document.getElementById("loginSubmitBtn").addEventListener('submit', (e) => {
+document.getElementById("loginButton").addEventListener('submit', (e) => {
     e.preventDefault();
     const email = signInForm[`email`].value;
     const password = signInForm[`password`].value;
