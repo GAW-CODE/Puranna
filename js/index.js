@@ -1,4 +1,4 @@
-import {uid} from "auth.js"
+
 document.getElementById("submitBtn").addEventListener("click",function(){
     let newEvent="";
     if (document.getElementById("priorityCheck").checked){
@@ -60,4 +60,3 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
     });
     console.log("success")
   })
-  
