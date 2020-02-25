@@ -18,16 +18,6 @@ const db = firebase.firestore();
 //uid of user
 let uid;
   
-auth.onAuthStateChanged(user => {
-  if (user) {
-    console.log("logged in");
-    setupUI(user);
-    location.href = '../index.html';
-  }
-  else {
-    console.log("logged out");
-  }
-})
 /**
 //signOut
 document.querySelector(".signOutBtn").addEventListener("click", () => {

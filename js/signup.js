@@ -19,7 +19,7 @@ if (submitButton != null) {
 auth.onAuthStateChanged(user => {
     if (user) {
       console.log("logged in");
-      location.href = '../index.html';
+      location.href = './index.html';
     }
     else {
       console.log("logged out");

@@ -1,4 +1,10 @@
 
+  auth.signInWithEmailAndPassword("leelillian205@gmail.com", "1234567").then(cred => {
+      console.log(cred);
+      sortByDate();
+}).catch(err => {
+  console.log(err);
+})
 document.getElementById("submitBtn").addEventListener("click",function(){
     let newEvent="";
     if (document.getElementById("priorityCheck").checked){
@@ -39,11 +45,6 @@ function getTime(){
     return str+"AM";
 }
 
-function sortReminders(){
-    //get all reminders
-
-}
-
 //backendstuff
 document.getElementById("submitBtn").addEventListener("click", (e) => {
     const reminder_title = document.getElementById("title").value;
@@ -60,3 +61,9 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
     });
     console.log("success")
   })
+
+  function sortByDate(){
+    getAllReminder().then(e=>{
+        console.log(e);
+    });
+  }

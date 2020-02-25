@@ -13,6 +13,16 @@ document.getElementById("loginButton").addEventListener('click', (e) => {
       });
     });
   })
+  
+auth.onAuthStateChanged(user => {
+  if (user) {
+    console.log("logged in");
+    location.href = './index.html';
+  }
+  else {
+    console.log("logged out");
+  }
+})
   //signOut
   /**
   document.querySelector(".signOutBtn").addEventListener("click", () => {
@@ -21,13 +31,3 @@ document.getElementById("loginButton").addEventListener('click', (e) => {
   })
   
    */
-  auth.onAuthStateChanged(user => {
-  if (user) {
-    console.log("logged in");
-    setupUI(user);
-    location.href = '../index.html';
-  }
-  else {
-    console.log("logged out");
-  }
-})

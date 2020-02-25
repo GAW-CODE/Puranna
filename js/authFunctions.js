@@ -1,3 +1,4 @@
+let uid;
 //triggered by signing in
 function setupUI(user) {
   uid = user.uid;
