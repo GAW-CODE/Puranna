@@ -1,10 +1,3 @@
-
-  auth.signInWithEmailAndPassword("leelillian205@gmail.com", "1234567").then(cred => {
-      console.log(cred);
-      sortByDate();
-}).catch(err => {
-  console.log(err);
-})
 document.getElementById("submitBtn").addEventListener("click",function(){
     let newEvent="";
     if (document.getElementById("priorityCheck").checked){
@@ -61,9 +54,9 @@ document.getElementById("submitBtn").addEventListener("click", (e) => {
     });
     console.log("success")
   })
-
-  function sortByDate(){
+sortByDate();
+function sortByDate(){
     getAllReminder().then(e=>{
         console.log(e);
     });
-  }
+}

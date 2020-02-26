@@ -1,7 +1,9 @@
+
 let uid;
 //triggered by signing in
 function setupUI(user) {
   uid = user.uid;
+  console.log(uid);
 }
 
 //use .then(...) after the function call to obtain the value

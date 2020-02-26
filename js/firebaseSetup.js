@@ -15,9 +15,7 @@ firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 const db = firebase.firestore();
 
-//uid of user
-let uid;
-  
+ 
 /**
 //signOut
 document.querySelector(".signOutBtn").addEventListener("click", () => {
