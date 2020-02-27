@@ -8,7 +8,7 @@
     --main-bg-color:#ffb4b2;
     --side-bg-color: #fffefd;
     --other-color: #928686;
-    
+
 }
 body{
     background-color:var(--other-color);
@@ -162,7 +162,7 @@ body{
     padding-top: 2.5vh;
     background-color: var(--side-bg-color);
     border-bottom: solid 0.2vh var(--other-color);
-    transition: background-color 0.1s ease-in 
+    transition: background-color 0.1s ease-in
 }
 .event:active{
     background-color:#ded9d3;
@@ -200,7 +200,7 @@ body{
     opacity: 0.5;
 }
 
-#modal{ 
+#modal{
     border-radius:1vh;
     display: none;
     height: 60vh;
@@ -277,7 +277,7 @@ input:focus {
     background-color: var(--other-color);
     height: 7%;
     width: 40%;
-    padding: 0.9em 1em 0.7em 1em;    
+    padding: 0.9em 1em 0.7em 1em;
     margin: auto;
     font-size: 3vh;
     border-radius:1vh;

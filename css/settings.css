@@ -29,11 +29,19 @@
 #settings h2 {
     height: auto;
     font-size: 6vw;
+<<<<<<< HEAD
     padding: 1.25vh;
     box-shadow: 0 10px 13px rgba(0,0,0,0.15);
     text-align: center;
     background-color: var(--other-color);
     color: white;
+=======
+    box-shadow: 0 3px rgba(0,0,0,0.15);
+    text-align: center;
+    background-color: var(--other-color);
+    color: white;
+    padding: 2vh 3vw 0 3vw;
+>>>>>>> ad74fb19b2b0c4ada55360a392e99ab1f66a0415
 }
 
 #settings h4 {
@@ -68,6 +76,7 @@
     height: 100%;
     padding-top: 2%;
 }
+<<<<<<< HEAD
 
 .switch {
   position: absolute;
@@ -113,3 +122,5 @@
     padding: 1vw;
     position: absolute;
   }
+=======
+>>>>>>> ad74fb19b2b0c4ada55360a392e99ab1f66a0415

@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+    background-color: rgb(104, 100, 100);
+    padding-top: 0;
+}
+
+h1 {
+    margin: 0;
+}
+
+#login {
+    background-color: rgb(247, 246, 242);
+    margin-top: 25vw;
+    height: 85vw;
+    border-radius: 3vw;
+    padding: 5vw;
+    margin-left: 8vw;
+    margin-right: 8vw;
+}
+
+#loginName {
+    text-align: center;
+    font-size: 7vw;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 1vw;
+}
+
+#signUpSubmitBtn {
+    color: rgb(247, 246, 242);
+    font-size: 5.5vw;
+    border-radius: 2vw;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    position: absolute;
+    right: 15vw;
+    top: 130vw;
+    height: 6vh;
+    padding: 1vh 4vw;
+    border: none;
+    background-color: rgb(104, 100, 100);
+}
+
+form {
+    position: absolute;
+    margin-top: 0;
+    width: 75%;
+    font-family: 'Roboto', sans-serif;
+}

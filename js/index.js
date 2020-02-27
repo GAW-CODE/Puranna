@@ -13,9 +13,10 @@ document.getElementById("submitBtn").addEventListener("click",function(){
                 </div>`
     }
         document.getElementById("eventsSpace").innerHTML += newEvent;
-        document.getElementById("title").value = "";
-        document.getElementById("datee").value="";
-        document.getElementById("timee").value="";
+        const inputArr = document.getElementsByTagName("input");
+        for(let i=0;i<3;i++){
+            inputArr[i].value = "";
+        }
         document.getElementById("priorityCheck").checked=false;
 });
 
@@ -35,4 +36,27 @@ function getTime(){
         return `${parseInt(str.substring(0,2))-12}:${str.substring(3,5)}PM`;
     } 
     return str+"AM";
+}
+
+//backendstuff
+document.getElementById("submitBtn").addEventListener("click", (e) => {
+    const reminder_title = document.getElementById("title").value;
+    const reminder_time = document.getElementById("timee").value;
+    const reminder_date = document.getElementById("datee").value;
+    const reminder_priority = document.getElementById("priorityCheck").checked;
+  
+    db.collection(uid).doc().set({
+        title: reminder_title,
+        time: reminder_time,
+        date: reminder_date,
+        priority: reminder_priority,
+        month: parseInt(reminder_date.substring(5, 7))
+    });
+    console.log("success")
+  })
+sortByDate();
+function sortByDate(){
+    getAllReminder().then(e=>{
+        console.log(e);
+    });
 }

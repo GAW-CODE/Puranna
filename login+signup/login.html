@@ -1,22 +1,35 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel="stylesheet" type="text/css" href="login.css"> 
+        <link rel="stylesheet" type="text/css" href="../css/login.css">
+        <link rel="stylesheet" type="text/css" href="../css/common.css">
+
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap" rel="stylesheet">
+        <script src = "../js/auth.js" defer></script>
+        <script src = "../js/firebaseSetup.js" defer></script>
+        <script src = "../js/authFunctions.js" defer></script>
+
+        <script src = "../js/login.js" defer></script>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
     </head>
     <body>
-        <div id="background"></div>
-        <div id="boxOne"></div>
-        <div id="boxTwo"></div>
-        <h1 id="title"> LILLY.LY </h1>
+        <div class="backgroundBox1"></div>
+        <div class="backgroundBox2"></div>
+        <h1 class="largeTitle"> LILLY.LY </h1>
             <div id="login">
                 <h1 id="loginName">LOGIN</h1>
                  <form>
-                    <input class ="InputBoxes" type="text" name="email" placeholder="email"> 
-                    <input class ="InputBoxes" type="text" name="password" placeholder="password">
+                    <input class ="inputBox" type="text" name="email" placeholder="email">
+                    <input class ="inputBox" type="text" name="password" placeholder="password">
                  </form>
+<<<<<<< HEAD
                  <a href = "signup.html" id = "links">sign up</a>
                  <input id="SubmitBtn" type="submit" value="submit">
+=======
+                 <input class="submitButton" id="loginButton" type="submit" value="submit">
+>>>>>>> ad74fb19b2b0c4ada55360a392e99ab1f66a0415
             </div>
     </body>
 </html>
