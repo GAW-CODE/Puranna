@@ -1,7 +1,13 @@
+*{
+    --main-bg-color:#ffb4b2;
+    --side-bg-color: #fffefd;
+    --other-color: #928686;
+}
 body{
     margin: 0vw;
-    background-color: rgb(104,100,100);
+    background: linear-gradient(180deg, var(--main-bg-color), #ffe4c9);
     padding-top: 0vw;
+    height: 92vh;
 }
 h1{
     margin: 0vw;
@@ -12,7 +18,7 @@ h1{
     border-top: 100% solid transparent;
     width: 0;
     height: 0;
-    border-top: 90vw solid rgb(205,199,185);
+    border-top: 90vw solid var(--side-bg-color);
     border-right: 100vw solid transparent;
     z-index: -1;
 }
@@ -20,12 +26,12 @@ h1{
     position: absolute;
     bottom: 0px;
     z-index: -1;
-    border-bottom: 65vw solid rgb(205,199,185);
+    border-bottom: 65vw solid var(--side-bg-color);
     border-right: 100vw solid transparent;
 }
 
 #login{
-    background-color: rgb(247,246,242);
+    background-color: var(--other-color);
     padding: 0vw;
     margin-top: 35vw;
     height: 60vw;
@@ -48,7 +54,7 @@ h1{
     margin-bottom: 1vw;
 }
 #SubmitBtn{
-    color: rgb(247,246,242);
+    color: var(--main-bg-color);
     font-size: 5.5vw;
     border-radius: 2vw;
     text-align: center;
@@ -62,7 +68,7 @@ h1{
     padding-top: 1vh;
     padding-bottom: 1vh;
     border: none;
-    background-color: rgb(104,100,100);
+    background-color: var(--side-bg-color);
 }
 .InputBoxes{
     margin-right: 5vw;
@@ -83,5 +89,15 @@ form{
     position: absolute;
     margin-top: 0vw;
     width: 75%;
+    font-family: 'Roboto', sans-serif;
+}
+
+#links{
+    font-size: 3vw;
+    position: absolute;
+    margin-left: 3vw;
+    margin-top: 45%;
+    color: black;
+    text-decoration: underline;
     font-family: 'Roboto', sans-serif;
 }

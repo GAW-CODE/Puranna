@@ -11,11 +11,8 @@
     margin-right: auto;
     margin-top: 5vh;
     background-color: white;
-<<<<<<< HEAD
     border-radius: 1vw;
     box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
-=======
->>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
 }
 
 #settingsNotifs {
@@ -25,25 +22,18 @@
     margin-right: auto;
     margin-top: 2vh;
     background-color: white;
-<<<<<<< HEAD
     border-radius: 1vw;
     box-shadow: 0 0 40px 10px rgba(0,0,0,0.15);
-=======
->>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
 }
 
 #settings h2 {
     height: auto;
     font-size: 6vw;
-<<<<<<< HEAD
     padding: 1.25vh;
-    box-shadow: 0 3px rgba(0,0,0,0.15);
+    box-shadow: 0 10px 13px rgba(0,0,0,0.15);
     text-align: center;
     background-color: var(--other-color);
     color: white;
-=======
-    padding: 2vh 3vw 0 3vw;
->>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
 }
 
 #settings h4 {
@@ -51,7 +41,6 @@
     font-size: 3vw;
     padding: 0.2vh 3vw;
 }
-<<<<<<< HEAD
 #logoutBtn{
     background-color: var(--other-color);
     border-radius: 1vw;
@@ -79,5 +68,48 @@
     height: 100%;
     padding-top: 2%;
 }
-=======
->>>>>>> 1b1c7db2f842ca14b6a34c71a4a5b38202800888
+
+.switch {
+  position: absolute;
+    width: 10vw;
+    height: 4vh;
+    right: 5vw;
+    top: 2.5vw;
+    display: inline-block;
+  }
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  .sliderRound:before {
+    position: absolute;
+    content: "";
+    background-color: var(--main-bg-color);
+    height: 80%;
+    width: 60%;
+    top: 10%;
+    border-radius: 50%;
+    transition: .4s;
+  }
+  input:checked + .sliderRound {
+    background-color: black;
+  }
+  input:checked + .sliderRound:before {
+    transform: translateX(4vw);
+  }
+  .sliderRound {
+    border-radius: 25%;
+    width: 8vw;
+    height: 6vw;
+    position: absolute;
+    left: 0vw;
+    background-color: var(--other-color);
+  }
+
+  .changeInput{
+    width: 70%;
+    height: 5vh;
+    padding: 1vw;
+    position: absolute;
+  }
